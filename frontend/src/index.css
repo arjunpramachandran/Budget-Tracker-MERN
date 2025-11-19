@@ -5,7 +5,8 @@
 @theme{
   --font-display: 'Poppins', sans-serif;
   --breakpoint-3xl: 1920px;
-  --color-primary: #2563EB;
+  --color-primary: #44adc9;
+  --color-primary-dark: #3a95b0;
 }
 
 @layer base{
@@ -16,4 +17,8 @@ body{
   background-color: #fcfbfc;
   overflow-x: hidden;
 }
+}
+
+.input-box{
+  @apply w-full flex border border-slate-300 rounded-md px-4 py-3 mb-3 mt-3 outline-none  focus-within:border-primary transition-all;
 }
