@@ -1,6 +1,6 @@
 const express = require('express');
 const {protect} = require('../Middlewares/authMiddle');
-const {createCategory, getCategories,deleteCategory} = require('../Controllers/CategoryController');
+const {createCategory, getCategories,deleteCategory, updateCategory} = require('../Controllers/CategoryController');
 const router = express.Router();
 router.put('/create', protect, createCategory);
 router.get('/get', protect, getCategories);
