@@ -5,12 +5,12 @@ import SignUp from './Pages/Auth/SignUp'
 import Income from './Pages/Dashboard/Income'
 import Home from './Pages/Dashboard/Home'
 import Expense from './Pages/Dashboard/Expense'
-import { UserProvider } from './Context/userContext'
+
 
 
 const App = () => {
   return (
-    <UserProvider>
+    
       <div>
         <Router>
           <Routes>
@@ -23,7 +23,7 @@ const App = () => {
           </Routes>
         </Router>
       </div>
-    </UserProvider>
+    
   )
 }
 
