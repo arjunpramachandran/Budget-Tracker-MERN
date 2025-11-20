@@ -5,25 +5,33 @@ import SignUp from './Pages/Auth/SignUp'
 import Income from './Pages/Dashboard/Income'
 import Home from './Pages/Dashboard/Home'
 import Expense from './Pages/Dashboard/Expense'
+import DashboardLayout from './Components/Layouts/DashboardLayout'
+import Category from './Pages/Dashboard/Category'
+import Reports from './Pages/Dashboard/Reports'
+
 
 
 
 const App = () => {
   return (
-    
-      <div>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Root />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/dashboard' element={<Home />} />
-            <Route path='/income' element={<Income />} />
-            <Route path='/expense' element={<Expense />} />
-          </Routes>
-        </Router>
-      </div>
-    
+
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Root />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route element={<DashboardLayout />}>
+            <Route path="/dashboard" element={<Home />} />
+            <Route path="/income" element={<Income />} />
+            <Route path="/expense" element={<Expense />} />
+            <Route path='/reports' element={<Reports/>}/>,
+            <Route path="/categories" element={<Category/>} />
+          </Route>
+        </Routes>
+      </Router>
+    </div>
+
   )
 }
 

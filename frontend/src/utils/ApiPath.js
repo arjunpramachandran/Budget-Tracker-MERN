@@ -1,5 +1,5 @@
-// export const BASE_URL = "http://localhost:8000";
-export const BASE_URL = "https://budget-tracker-mern-backend.onrender.com";
+export const BASE_URL = "http://localhost:8000";
+//export const BASE_URL = "https://budget-tracker-mern-backend.onrender.com";
 
 export const API_PATHS = {
     AUTH: {
@@ -21,5 +21,10 @@ export const API_PATHS = {
         GET_EXPENSES: "/api/expense/get",
         DELETE_EXPENSE: "/api/expense/delete"
     },
+    CATEGORY: {
+        GET_CATEGORIES: "/api/category/get",
+        ADD_CATEGORY: "/api/category/add",
+        DELETE_CATEGORY: "/api/category/delete"
+    }
     
 }
