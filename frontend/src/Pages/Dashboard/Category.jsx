@@ -29,6 +29,8 @@ const Category = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(formData);
+        
         onAdd(formData);
         setFormOpen(false);
     };

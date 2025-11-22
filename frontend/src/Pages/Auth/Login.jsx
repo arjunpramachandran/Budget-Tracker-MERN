@@ -5,7 +5,8 @@ import Input from '../../Components/Inputs/Input';
 import { validateEmail } from '../../utils/helper';
 import axiosInstance from '../../utils/axiosinstance';
 import { API_PATHS } from '../../utils/ApiPath';
-import { UserContext } from '../../Context/UserContext';
+import { UserContext } from '../../Context/userContext';
+
 
 export const Login = () => {
   const [email, setEmail] = React.useState('');
@@ -33,7 +34,9 @@ export const Login = () => {
         email,
         password
       });
-      const {user , token} = response.data;
+      const { id ,fullName, token} = response.data;
+      console.log(response.data);
+      const user = { id, fullName };
       if (token) {
         localStorage.setItem('token', token);
         updateUser(user);

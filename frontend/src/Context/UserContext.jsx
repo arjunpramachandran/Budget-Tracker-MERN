@@ -7,10 +7,15 @@ export const UserProvider = ({ children }) => {
 
   // Load user from localStorage on refresh
   useEffect(() => {
-    const savedUser = localStorage.getItem("user");
+    try {
+      const savedUser = localStorage.getItem("user");
 
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
+      if (savedUser && savedUser !== "undefined") {
+        setUser(JSON.parse(savedUser));
+      }
+    } catch (error) {
+      console.error("Invalid JSON in localStorage:", error);
+      localStorage.removeItem("user");
     }
   }, []);
 
