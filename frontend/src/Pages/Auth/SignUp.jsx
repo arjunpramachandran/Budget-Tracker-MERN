@@ -5,7 +5,7 @@ import Input from '../../Components/Inputs/Input';
 import { validateEmail } from '../../utils/helper';
 import axiosInstance from '../../utils/axiosinstance';
 import { API_PATHS } from '../../utils/ApiPath';  
-import { UserContext } from '../../Context/userContext';
+import { UserContext } from '../../Context/UserContext';
 
 
 const SignUp = () => {
