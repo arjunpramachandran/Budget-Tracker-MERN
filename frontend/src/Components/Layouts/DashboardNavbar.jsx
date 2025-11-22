@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Plus, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { UserContext } from "../../Context/userContext";
+import { UserContext } from "../../Context/UserContext";
 
 
 
